@@ -1,15 +1,15 @@
 package glsia.location;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,4 +21,17 @@ public class Product {
     public String name;
     public Double price;
     public String description;
+
+    @OneToMany(mappedBy = "product")
+    public List<Subcategory> subcategories;
+
+
+    @ManyToOne
+    @JoinColumn(name = "order_id", nullable = true)
+    private OrderItem order;
+
+    @ManyToOne
+    @JoinColumn(name = "provider_id", nullable = true)
+    private Provider provider;
 }
+

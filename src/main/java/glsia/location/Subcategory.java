@@ -1,9 +1,6 @@
 package glsia.location;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,5 +17,16 @@ public class Subcategory {
     public int id;
     public String title;
     public String description;
+
+    @ManyToOne
+    @JoinColumn(name = "category_ID")
+    public Category category;
+
+    @ManyToOne
+    @JoinColumn(name = "product_ID")
+    public Product product;
+
+
+
 }
 

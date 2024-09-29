@@ -1,24 +1,19 @@
 package glsia.location;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+
+import java.util.List;
+
 
 @Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class Provider extends User{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public String matricule;
-    public String service;
-    public String company;
+@DiscriminatorValue("PROVIDER")
+public class Provider extends User {
+    private String matricule;
+    private String service;
+    private String company;
+
+    @OneToMany(mappedBy = "provider")
+    public List<Product> products;
+
 
 }
