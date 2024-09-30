@@ -10,4 +10,8 @@ public class Customer extends User {
 
     @OneToMany(mappedBy = "customer")
     public List<OrderItem> orderItems;
+
+
+    // hello comment
+
 }
