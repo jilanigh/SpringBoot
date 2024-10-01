@@ -1,5 +1,6 @@
-package glsia.location;
+package glsia.location.repositories;
 
+import glsia.location.repositories.User;
 import jakarta.persistence.*;
 
 import java.util.List;

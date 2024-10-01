@@ -1,4 +1,4 @@
-package glsia.location;
+package glsia.location.repositories;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -21,5 +21,6 @@ public class User {
     private String address;
     private String phone;
     private String email;
+
 
 }

@@ -1,5 +1,7 @@
-package glsia.location;
+package glsia.location.repositories;
 
+import glsia.location.repositories.Customer;
+import glsia.location.repositories.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

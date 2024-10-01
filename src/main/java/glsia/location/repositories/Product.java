@@ -1,4 +1,4 @@
-package glsia.location;
+package glsia.location.repositories;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
