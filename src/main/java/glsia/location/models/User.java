@@ -1,4 +1,4 @@
-package glsia.location.repositories;
+package glsia.location.models;
 
 import jakarta.persistence.*;
 import lombok.*;

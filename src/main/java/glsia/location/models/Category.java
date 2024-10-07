@@ -1,6 +1,5 @@
-package glsia.location.repositories;
+package glsia.location.models;
 
-import glsia.location.repositories.Subcategory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
