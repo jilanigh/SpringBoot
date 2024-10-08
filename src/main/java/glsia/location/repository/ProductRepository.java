@@ -9,7 +9,9 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    List<Provider> findByMatricule(String matricule);
-    List<Provider> findByCompany(String company);
+
+    List<Product> findByName(String name);
+
+
 
 }
