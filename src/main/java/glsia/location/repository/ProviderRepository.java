@@ -10,4 +10,5 @@ import java.util.List;
 public interface ProviderRepository extends JpaRepository<Provider,Long> {
     List<Provider> findByMatricule(String matricule);
     List<Provider> findByCompany(String company);
+
 }
